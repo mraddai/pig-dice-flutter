@@ -1,16 +1,28 @@
-# _4th_hour_project
 
-A new Flutter project.
 
-## Getting Started
+# Pig Dice Game (Flutter)
 
-This project is a starting point for a Flutter application.
+A simple implementation of the classic **Pig** dice game built with Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+## 🎮 Rules
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Two players take turns.
+- On your turn, you can **Roll** or **Hold**:
+  - **Roll**:  
+    - If you roll a **1**, your turn ends and you gain **0** points this turn.  
+    - If you roll **2–6**, that value is added to your **turn total**, and you may roll again or hold.
+  - **Hold**:  
+    - Your **turn total** is added to your overall score.  
+    - Your turn ends and the other player starts.
+- First player to reach or exceed the target score (default: 50) wins.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧱 Structure
+
+- `lib/pig_game_state.dart` – pure Dart game logic (scores, roll/hold, winner).
+- `lib/main.dart` – Flutter UI (buttons, score display, status text).
+
+## 🚀 Run it
+
+```bash
+flutter pub get
+flutter run -d chrome   # or: flutter run
